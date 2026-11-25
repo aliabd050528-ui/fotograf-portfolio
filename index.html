@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="En enkel portfolio med fotografier och kontaktinformation.">
+  <title>Alex Foto – Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="logo" href="#hem">Alex Foto</a>
+    <nav aria-label="Huvudmeny">
+      <a href="#hem">Hem</a>
+      <a href="#galleri">Galleri</a>
+      <a href="#om">Om mig</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="hem">
+      <div class="hero-text">
+        <p class="eyebrow">FOTOGRAFI · PORTFOLIO</p>
+        <h1>Små ögonblick.<br>Stora minnen.</h1>
+        <p>Välkommen till min portfolio. Här visar jag några bilder som jag tycker extra mycket om.</p>
+        <a class="button" href="#galleri">Se bilder</a>
+      </div>
+      <img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?w=1000&auto=format&fit=crop&q=80"
+           alt="Berg och sjö i kvällsljus">
+    </section>
+
+    <section class="section" id="galleri">
+      <div class="section-heading">
+        <p class="eyebrow">MINA FAVORITER</p>
+        <h2>Bildgalleri</h2>
+        <p>Välj en kategori för att visa olika bilder.</p>
+      </div>
+      <div class="filters" aria-label="Filtrera bilder">
+        <button class="filter-button active" data-filter="alla" aria-pressed="true">Alla</button>
+        <button class="filter-button" data-filter="natur" aria-pressed="false">Natur</button>
+        <button class="filter-button" data-filter="stad" aria-pressed="false">Stad</button>
+        <button class="filter-button" data-filter="djur" aria-pressed="false">Djur</button>
+      </div>
+      <div class="gallery">
+        <figure class="photo-card" data-category="natur">
+          <img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?w=800&auto=format&fit=crop&q=80" alt="Berg som speglas i en sjö">
+          <figcaption>Natur – lugn vid sjön</figcaption>
+        </figure>
+        <figure class="photo-card" data-category="stad">
+          <img src="https://images.unsplash.com/photo-1519608487953-e999c86e7455?w=800&auto=format&fit=crop&q=80" alt="Stad med byggnader i kvällsljus">
+          <figcaption>Stad – kvällsljus</figcaption>
+        </figure>
+        <figure class="photo-card" data-category="djur">
+          <img src="https://images.unsplash.com/photo-1517849845537-4d257902454a?w=800&auto=format&fit=crop&q=80" alt="Hund som tittar mot kameran">
+          <figcaption>Djur – en glad hund</figcaption>
+        </figure>
+        <figure class="photo-card" data-category="natur">
+          <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800&auto=format&fit=crop&q=80" alt="Solstrålar mellan träd i en skog">
+          <figcaption>Natur – skogspromenad</figcaption>
+        </figure>
+        <figure class="photo-card" data-category="stad">
+          <img src="https://images.unsplash.com/photo-1519501025264-65ba15a82390?w=800&auto=format&fit=crop&q=80" alt="Höga byggnader i en storstad">
+          <figcaption>Stad – bland husen</figcaption>
+        </figure>
+        <figure class="photo-card" data-category="djur">
+          <img src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?w=800&auto=format&fit=crop&q=80" alt="Hund som sitter utomhus">
+          <figcaption>Djur – ute i naturen</figcaption>
+        </figure>
+      </div>
+      <p class="small-note">Bilderna hämtas från Unsplash och behöver internet för att visas.</p>
+    </section>
+
+    <section class="about section" id="om">
+      <div>
+        <p class="eyebrow">LITE OM MIG</p>
+        <h2>Hej, jag heter Alex!</h2>
+        <p>Jag tycker om att fotografera natur, städer och djur. Jag gillar att fånga fina ögonblick och visa världen från mitt perspektiv.</p>
+        <p>Den här sidan är min portfolio där jag samlar några av mina favoritbilder.</p>
+      </div>
+      <div class="about-box">
+        <span aria-hidden="true">📷</span>
+        <p>Fotografi handlar om att se det fina i det vanliga.</p>
+      </div>
+    </section>
+
+    <section class="section contact" id="kontakt">
+      <div class="section-heading">
+        <p class="eyebrow">HÖR AV DIG</p>
+        <h2>Kontakt</h2>
+        <p>Fyll i formuläret om du vill skicka ett meddelande.</p>
+      </div>
+      <form id="contact-form">
+        <label for="name">Namn</label>
+        <input id="name" name="name" type="text" required>
+        <label for="email">E-post</label>
+        <input id="email" name="email" type="email" required>
+        <label for="message">Meddelande</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+        <button class="button" type="submit">Skicka</button>
+        <p id="form-message" class="form-message" role="status" aria-live="polite"></p>
+      </form>
+      <p class="small-note">Obs! Formuläret är bara en demonstration. Det skickar eller sparar inte uppgifter.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 Alex Foto · Portfolio-projekt</p>
+    <a href="#hem">Till toppen ↑</a>
+  </footer>
+</body>
+</html>
